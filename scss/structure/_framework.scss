@@ -1,0 +1,25 @@
+/*------------------------
+Framework
+------------------------*/
+.d-none {display: none;}
+.d-in-block {display: inline-block;}
+.d-flex {display: flex;}
+.flex-column {flex-direction: column;}
+
+.justify-center {justify-content: center;}
+.justify-between {justify-content: space-between}
+
+.align-center {align-items: center;}
+
+.w-100 {width: 100%;}
+
+.text-center {text-align: center;}
+
+/*------------------------
+Components
+------------------------*/
+.title {
+    color: var(--clr-primary);
+    font-size: 6.9rem;
+    font-family: 'bellefair-regular', sans-serif;
+}
