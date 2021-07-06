@@ -13,13 +13,61 @@ Framework
 
 .w-100 {width: 100%;}
 
+.img-fluid {max-width: 100%; width: 100%;}
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
 .text-center {text-align: center;}
 
 /*------------------------
 Components
 ------------------------*/
+/* text */
 .title {
     color: var(--clr-primary);
     font-size: 6.9rem;
-    font-family: 'bellefair-regular', sans-serif;
+    font-family: var(--font-title);
+}
+
+.text-p {
+    color: var(--clr-paragraph);
+}
+
+/* buttons */
+.btn {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 2px;
+    background-color: var(--clr-primary);
+    padding: 9px 18px;
+
+    &--sm {
+        font-size: 1.4rem;
+    }
+
+    &--red {
+        background-color: var(--clr-btn);
+
+        &:hover{
+            background-color: var(--clr-btn-hover);
+        }
+    }
 }

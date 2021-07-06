@@ -1,11 +1,6 @@
-// Cores
-:root {
-    --clr-primary: #22425C;
-}
-
 // Fontes
 @font-face {
-    font-family: 'bellefair-regular';
+    font-family: 'Bellefair';
     src: url('../fonts/bellefair-regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
@@ -34,6 +29,25 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+}
+
+/* Cores e fontes */
+:root {
+    --clr-primary: #22425C;
+
+    --clr-paragraph: #4B535B;
+
+    --clr-border: #CACBCE;
+
+    --clr-btn: #E5695B;
+    --clr-btn-hover: #F26F60;
+
+    --box-shadow: 0px 3px 6px #00000029;
+
+    --font-title: 'Bellefair', serif;
+    --font-book: 'cooper-hewitt-book', sans-serif;
+    --font-light: 'cooper-hewitt-light', sans-serif;
+    --font-medium: 'cooper-hewitt-medium', sans-serif;
 }
 
 /*------------------------

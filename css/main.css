@@ -12,12 +12,8 @@ img {
   display: block;
 }
 
-:root {
-  --clr-primary: #22425C;
-}
-
 @font-face {
-  font-family: "bellefair-regular";
+  font-family: "Bellefair";
   src: url("../fonts/bellefair-regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
@@ -44,6 +40,20 @@ img {
   font-style: normal;
   font-display: swap;
 }
+/* Cores e fontes */
+:root {
+  --clr-primary: #22425C;
+  --clr-paragraph: #4B535B;
+  --clr-border: #CACBCE;
+  --clr-btn: #E5695B;
+  --clr-btn-hover: #F26F60;
+  --box-shadow: 0px 3px 6px #00000029;
+  --font-title: "Bellefair", serif;
+  --font-book: "cooper-hewitt-book", sans-serif;
+  --font-light: "cooper-hewitt-light", sans-serif;
+  --font-medium: "cooper-hewitt-medium", sans-serif;
+}
+
 /*------------------------
 Animacoes
 ------------------------*/
@@ -387,6 +397,30 @@ Framework
   width: 100%;
 }
 
+.img-fluid {
+  max-width: 100%;
+  width: 100%;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
 .text-center {
   text-align: center;
 }
@@ -394,10 +428,34 @@ Framework
 /*------------------------
 Components
 ------------------------*/
+/* text */
 .title {
   color: var(--clr-primary);
   font-size: 6.9rem;
-  font-family: "bellefair-regular", sans-serif;
+  font-family: var(--font-title);
+}
+
+.text-p {
+  color: var(--clr-paragraph);
+}
+
+/* buttons */
+.btn {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 2px;
+  background-color: var(--clr-primary);
+  padding: 9px 18px;
+}
+.btn--sm {
+  font-size: 1.4rem;
+}
+.btn--red {
+  background-color: var(--clr-btn);
+}
+.btn--red:hover {
+  background-color: var(--clr-btn-hover);
 }
 
 /*------------------------
@@ -411,7 +469,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "cooper-hewitt-book", sans-serif;
+  font-family: var(--font-book);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -419,11 +477,6 @@ body {
 
 body.frozen {
   overflow-y: hidden;
-}
-
-h1, h2, h3, h4,
-.title {
-  font-family: "bellefair-regular", sans-serif;
 }
 
 .container {
@@ -486,7 +539,7 @@ footer {
 }
 footer .copy {
   font-size: 1.4rem;
-  font-family: "cooper-hewitt-light", sans-serif;
+  font-family: var(--font-light);
   color: #787878;
   margin: 25px 0;
 }
@@ -494,79 +547,5 @@ footer .copy {
 /*------------------------
 Responsivo
 ------------------------*/
-@media screen and (max-width: 615px) {
-  .menu__overlay {
-    transition: 0.3s;
-  }
-  .menu__links {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: -116%;
-    right: 0;
-    background: #cccccc;
-    height: 100vh;
-    width: 78vw;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    transition: 0.3s;
-  }
-  .menu__mobile__btn {
-    position: relative;
-    z-index: 2;
-    cursor: pointer;
-    top: -6px;
-  }
-  .menu__mobile__btn, .menu__mobile__btn::before, .menu__mobile__btn:after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 5px;
-    background: #000;
-    border-radius: 5px;
-    transition: 0.3s;
-  }
-  .menu__mobile__btn::before {
-    margin-top: 8px;
-  }
-  .menu__mobile__btn::after {
-    margin-top: 3px;
-  }
-
-  .menu.active .menu__links {
-    display: flex;
-    flex-direction: column;
-    left: -27px;
-    z-index: 1;
-  }
-  .menu.active .menu__links__link {
-    margin: 0;
-  }
-  .menu.active .menu__overlay {
-    display: block;
-    position: absolute;
-    background: #1b1b1b5e;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    animation: slideRight 0.3s;
-    cursor: pointer;
-  }
-  .menu.active .menu__mobile__btn {
-    display: block;
-    transform: rotate(45deg);
-    top: 8px;
-  }
-  .menu.active .menu__mobile__btn::before {
-    opacity: 0;
-  }
-  .menu.active .menu__mobile__btn::after {
-    transform: rotate(-90deg) translate(16px, 0px);
-  }
-}
 
 /*# sourceMappingURL=main.css.map */
