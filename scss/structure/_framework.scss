@@ -35,6 +35,10 @@ Framework
 }
 
 .text-center {text-align: center;}
+.text-primary {color: var(--clr-txt);}
+.text-uppercase {text-transform: uppercase;}
+
+.mx-auto {margin-left: auto; margin-right: auto;}
 
 /*------------------------
 Components
@@ -46,8 +50,10 @@ Components
     font-family: var(--font-title);
 }
 
-.text-p {
-    color: var(--clr-paragraph);
+.subtitle {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
 }
 
 /* buttons */
@@ -61,6 +67,11 @@ Components
 
     &--sm {
         font-size: 1.4rem;
+    }
+
+    &--big {
+        font-size: 2.2rem;
+        padding: 13px 25px;
     }
 
     &--red {

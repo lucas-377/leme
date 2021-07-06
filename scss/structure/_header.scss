@@ -5,10 +5,11 @@ Header
 ------------------------*/
 header {
     position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
+    // left: 50%;
+    // transform: translateX(-50%);
     z-index: 1;
     height: 100px;
+    transition: .3s;
 }
 
 .menu {

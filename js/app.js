@@ -1,15 +1,19 @@
 /*------------------------
-Menu Hamburguer
+Menu Dynamic
 ------------------------*/
-const Menu = {
-    toggleMenu() {
-        $('.menu').toggleClass('active');
-        $('body').toggleClass('frozen');
-    }
-}
+$(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 120){
+            $("header").css('background-color', 'white');
+            $("header").css('height', '60px');
+        }
 
-$('.menu__overlay').click(() => Menu.toggleMenu());
-$('.menu__mobile__btn').click(() => Menu.toggleMenu());
+        else {
+            $("header").css('background-color', 'transparent');
+            $("header").css('height', '100px');
+        }
+    });
+});
 
 /*------------------------
 Home Carousel
