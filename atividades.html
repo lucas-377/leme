@@ -27,14 +27,173 @@
 <body class="webp">
     <main>
         <section class="intro">
-            <div class="container">
-                <img src="./images/icons/logo-leme.svg" alt="Logotipo da Leme">
-                <p class="title text-center" data-aos="fade-down">É um lindo dia no mar!</p>
+            <div class="container d-flex flex-column align-center">
+                <img src="./images/icons/logo-leme.svg" class="intro__logo" data-aos="fade-down" alt="Logotipo da Leme">
+                <p class="call text-center text-primary" data-aos="fade-down">É um lindo dia no mar!</p>
+                <p class="title text-center text-uppercase" data-aos="fade-down">Atividades</p>
             </div>
             <div class="intro__img">
                 <img class="intro__bg" src="./images/icons/ondas.svg" alt="Ondas com pôr do sol">
             </div>
         </section><!-- Intro -->
+
+        <section class="filters">
+            <div class="container" data-aos="fade-down">
+                <p class="mb-2">Filtrar atividades</p>
+                <div class="d-flex flex-wrap">
+                    <div class="col d-flex flex-column">
+                        <label for="name" class="label">Nome da atividade</label>
+                        <input class="form-control" type="text" id="name" placeholder="Nome da atividade">
+                    </div>
+
+                    <div class="col d-flex flex-column">
+                        <label for="type" class="label">Tipo da atividade</label>
+                        <select class="form-control" id="type">
+                            <option value="">Tipo da atividade</option>
+                        </select>
+                    </div>
+
+                    <div class="col d-flex flex-column">
+                        <label class="label">Data da atividade</label>
+                        <div class="form-row">
+                            <div class="col col-md-2">
+                                <input class="form-control" type="date" name="star-date" id="start-date" placeholder="Data início">
+                            </div>
+                            
+                            <div class="col col-md-2">
+                                <input class="form-control" type="date" name="end-date" id="init-date" placeholder="Data fim">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col d-flex flex-column align-center">
+                        <label class="label text-center">Vagas disponíveis</label>
+                        <input class="form-control" type="checkbox" name="vacancy" id="vacancy">
+                    </div>
+                </div>
+            </div><!-- Container -->
+        </section><!-- Filters -->
+
+        <section class="data-table" data-aos="fade-down">
+            <div class="container">
+                <table class="table table--responsive">
+                    <thead>
+                       <tr>
+                        <th class="table__img"></th>
+                        <th class="table__name">Nome</th>
+                        <th class="table__type">Tipo</th>
+                        <th class="table__date">Data</th>
+                        <th class="table__vacancy">Vagas Disponíveis</th>
+                        <th></th>
+                       </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="table__img">
+                                <img src="./images/robert-bye-xjQhTrxyVBw-unsplash.jpg">
+                            </td>
+                            <td class="table__name">Trilha em Morretes</td>
+                            <td class="table__type"><p class="ride">Passeio</p></td>
+                            <td class="table__date">15/08/2021</td>
+                            <td class="table__vacancy">3 vagas disponíveis</td>
+                            <td class="table__btn">
+                                <a href="#!" class="btn btn--sm btn--outline">
+                                    <i class="fas fa-info-circle"></i> Ver detalhes
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr class="spacer"><td></td></tr>
+
+                        <tr>
+                            <td class="table__img">
+                                <img src="./images/meritt-thomas-dX3q7dmc_AI-unsplash.jpg">
+                            </td>
+                            <td class="table__name">Vôlei de Praia</td>
+                            <td class="table__type"><p class="sport">Esporte</p></td>
+                            <td class="table__date">07/09/2021</td>
+                            <td class="table__vacancy">1 vaga disponível!</td>
+                            <td class="table__btn">
+                                <a href="#!" class="btn btn--sm btn--outline">
+                                    <i class="fas fa-info-circle"></i> Ver detalhes
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr class="spacer"><td></td></tr>
+
+                        <tr>
+                            <td class="table__img">
+                                <img src="./images/shifaaz-shamoon-AX4IP3j8cB0-unsplash.jpg">
+                            </td>
+                            <td class="table__name">Mergulho Lagoa Azul</td>
+                            <td class="table__type"><p class="activity">Atividade</p></td>
+                            <td class="table__date">07/09/2021</td>
+                            <td class="table__vacancy">ESGOTADO</td>
+                            <td class="table__btn">
+                                <a aria-disabled="true" class="btn btn--sm btn--outline-disabled">
+                                    <i class="fas fa-info-circle"></i> Ver detalhes
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr class="spacer"><td></td></tr>
+
+                        <tr>
+                            <td class="table__img">
+                                <img src="./images/valentyn-ihnatov-iGB5BQDVcSw-unsplash.jpg">
+                            </td>
+                            <td class="table__name">Campeonato de Basquete</td>
+                            <td class="table__type"><p class="sport">Esporte</p></td>
+                            <td class="table__date">11/09/2021</td>
+                            <td class="table__vacancy">7 Vagas disponíveis</td>
+                            <td class="table__btn">
+                                <a href="#!" class="btn btn--sm btn--outline">
+                                    <i class="fas fa-info-circle"></i> Ver detalhes
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr class="spacer"><td></td></tr>
+
+                        <tr>
+                            <td class="table__img">
+                                <img src="./images/hoodh-ahmed-MiLSst1yExk-unsplash.jpg">
+                            </td>
+                            <td class="table__name">Passeio de Barco Ilha do Mel</td>
+                            <td class="table__type"><p class="ride">Passeio</p></td>
+                            <td class="table__date">23/09/2021</td>
+                            <td class="table__vacancy">ESGOTADO</td>
+                            <td class="table__btn">
+                                <a aria-disabled="true" class="btn btn--sm btn--outline-disabled">
+                                    <i class="fas fa-info-circle"></i> Ver detalhes
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr class="spacer"><td></td></tr>
+
+                        <tr>
+                            <td class="table__img">
+                                <img src="./images/guille-pozzi-2xkAA5Ez_oU-unsplash.jpg">
+                            </td>
+                            <td class="table__name">Surf em Matinhos</td>
+                            <td class="table__type"><p class="activity">Atividade</p></td>
+                            <td class="table__date">29/09/2021</td>
+                            <td class="table__vacancy">20 Vagas disponíveis</td>
+                            <td class="table__btn">
+                                <a href="#!" class="btn btn--sm btn--outline">
+                                    <i class="fas fa-info-circle"></i> Ver detalhes
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr class="spacer"><td></td></tr>
+                    </tbody>
+                </table>
+            </div><!-- Container -->
+        </section><!-- Data table -->
 
     </main>
 

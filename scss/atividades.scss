@@ -5,6 +5,183 @@ body {
     background-color: #F6F5F6;
 }
 
+/* Intro */
+.intro {
+    &__logo {
+      margin: 30px 0;
+    }
+
+    &__img {
+        // margin-top: 100px;
+        width: 100%;
+        // margin-bottom: -1px;
+
+        img {
+            object-fit: cover;
+            object-position: 53% 50%;
+            width: 100%;
+            min-height: 150px;
+        }
+    }
+
+    .call {font-size: 2rem;}
+    .title { font-size: 4.5rem;}
+}
+
+.filters {
+    background-color: var(--clr-primary);
+    // padding-bottom: 50px;
+    
+    .container {
+        background-color: #fff;
+        color: var(--clr-txt);
+        margin-top: -50px;
+        position: relative;
+        top: 50px;
+        border-radius: 10px;
+        padding: 25px;
+        box-shadow: var(--box-shadow);
+        border: 1px solid var(--clr-border);
+    }
+
+    .col {
+        flex-basis: 15%;
+        margin: 0 20px 15px 0;
+
+        &-md-2 {
+            flex-basis: 100%;
+            max-width: 48%;
+            margin: 0;
+        }
+    }
+
+    .label {
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+    }
+
+    input, select {
+        height: 30px;
+        color: var(--clr-txt);
+    }
+}
+
+.data-table {
+    padding: 60px 0 50px 0;
+
+    .table {
+        width: 100%;
+        margin-bottom: 1rem;
+        background-color: transparent;
+        border-collapse: collapse;
+        color: var(--clr-txt);
+
+        & td, & th {
+            padding: 1rem;
+            vertical-align: middle;
+            border-top: 1px solid #dee2e6;
+            text-align: center;
+            height: 70px;
+        }
+
+        thead th {
+            vertical-align: bottom;
+            border-top: none;
+            // border-bottom: 2px solid #dee2e6;
+        }
+
+        tbody tr {
+            border: 1px solid var(--clr-border);
+            background-color: #fff;
+            box-shadow: var(--box-shadow);
+
+            &.spacer {
+                border: none; 
+                background-color: transparent;
+                box-shadow: none;
+                
+                td {
+                    height: 20px;
+                }
+            }
+        }
+
+        &__img {
+            min-width: 80px;
+            width: 80px;
+            padding: 0!important;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        &__name {
+            width: 300px;
+        }
+
+        &__type {
+            p {
+                border: 1px solid;
+                border-radius: 50px;
+                text-transform: uppercase;
+                padding: 6px 18px;
+                font-size: 1.4rem;
+            }
+
+            .ride {
+                border: 1px solid #A1ADB9;
+                background-color: #A1ADB9;
+                color: #fff;
+            }
+
+            .sport {
+                border: 1px solid #768999;
+                background-color: #768999;
+                color: #fff;
+            }
+
+            .activity {
+                border: 1px solid #22425C;
+                background-color: #22425C;
+                color: #fff;
+            }
+        }
+
+        &__date {
+            min-width: 300px;
+        }
+
+        &__btn {
+            min-width: 200px;
+        }
+    }
+}
 /*------------------------
 Responsivo
 ------------------------*/
+@media screen and (max-width: 975px){
+    .filters {
+        .col {
+            flex-basis: 100%;
+            margin: 0 20px 15px 0;
+    
+            &-md-2 {
+                flex-basis: 100%;
+                max-width: 50%;
+                margin: 0;
+            }
+        }
+    }
+
+    .table {
+        &--responsive {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+        }
+    }
+}
