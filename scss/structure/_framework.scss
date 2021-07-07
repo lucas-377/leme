@@ -132,3 +132,48 @@ Components
         }
     }
 }
+
+/* Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 18px;
+    margin: 0 10px;
+
+    input {
+        display: none;
+
+        &:checked + .switch__slider {
+            background-color: var(--clr-primary);
+
+            &::before {
+                transform: translateX(calc(35px - 19px));
+            }
+        }
+    }
+
+    &__slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--clr-border);
+        transition: .3s;
+        border-radius: 50px;
+
+        &::before {
+            position: absolute;
+            content:'';
+            height: 16px;
+            width: 16px;
+            left: 2px;
+            bottom: 1px;
+            background-color: #fff;
+            transition: .3s;
+            border-radius: 50%;
+        }
+    }
+}

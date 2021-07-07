@@ -1,4 +1,6 @@
-// Fontes
+/*------------------------
+Fonts
+------------------------*/
 @font-face {
     font-family: 'Bellefair';
     src: url('../fonts/bellefair-regular.woff2') format('woff2');
@@ -31,7 +33,7 @@
     font-display: swap;
 }
 
-/* Cores e fontes */
+/* Colors and fonts */
 :root {
     --clr-primary: #22425C;
 
@@ -51,7 +53,7 @@
 }
 
 /*------------------------
-Animacoes
+Animations
 ------------------------*/
 @keyframes slideRight {
     from {
